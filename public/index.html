@@ -9,8 +9,22 @@
 </head>
 <body>
   <header>
-    <img src="logo.png">
+    <img class="logo" src="img/logo.png">
   </header>
+  <div class="carousel">
+    <div class="arrow arrow-left"><i class="fas fa-arrow-left"></i></div>
+    <div class="main-image">
+      <img src="img/studio1.jpg" alt="Immagine principale">
+    </div>
+    <div class="arrow arrow-right"><i class="fas fa-arrow-right"></i></div>
+    <div class="thumbnails">
+      <img src="img/studio1.jpg" alt="Immagine 1">
+      <img src="img/studio2.jpg" alt="Immagine 2">
+      <img src="img/studio3.jpg" alt="Immagine 3">
+      <img src="img/studio4.jpg" alt="Immagine 4">
+      <img src="img/studio5.jpg" alt="Immagine 5">
+    </div>
+  </div>
   <main>
     <div>
       <h3>Contatti</h3>
@@ -43,5 +57,32 @@
       referrerpolicy="no-referrer-when-downgrade"
     ></iframe>
   </main>
+  <script>
+   const thumbnails = document.querySelectorAll('.thumbnails img');
+    const mainImage = document.querySelector('.main-image img');
+    const arrowLeft = document.querySelector('.arrow-left');
+    const arrowRight = document.querySelector('.arrow-right');
+    let currentIndex = 0;
+
+    thumbnails.forEach((thumbnail, index) => {
+      thumbnail.addEventListener('click', () => {
+        mainImage.src = thumbnail.src;
+        mainImage.alt = thumbnail.alt;
+        currentIndex = index;
+      });
+    });
+
+    arrowLeft.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+      mainImage.src = thumbnails[currentIndex].src;
+      mainImage.alt = thumbnails[currentIndex].alt;
+    });
+
+    arrowRight.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % thumbnails.length;
+      mainImage.src = thumbnails[currentIndex].src;
+      mainImage.alt = thumbnails[currentIndex].alt;
+    });
+  </script>
 </body>
 </html>

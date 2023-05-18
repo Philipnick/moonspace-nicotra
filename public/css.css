@@ -1,17 +1,26 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "NOME_FONT", sans-serif; 
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-image: url(studio1.jpg);
+  background-color: #7C8F74;
   background-size: cover;
   background-position: center;
 }
+@font-face {
+  font-family: "NOME_FONT";
+  src: url("fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");
+}
 header {
-  background-color: #e1e0e0ee;
-  color: #ffffff;
-  text-align: center;
-  padding: 1rem;
+  background-color: #ffffffee;
+  padding-bottom: 7% ;
+}
+.logo{
+  width: 300px;
+  float: left;
+  margin-top: 1%;
+  margin-left: 1%;
+  
 }
 main {
   display: flex;
@@ -23,10 +32,13 @@ main {
   padding: 2rem;
   background-color: #ffffffe9;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
+
 }
 iframe {
   margin-left: 20px;
+  max-width: 100%;
+  max-width: 50vw;
+  max-height: 80vh;
 }
 h1 {
   font-size: 3rem;
@@ -42,6 +54,10 @@ ul {
 }
 li {
   margin-bottom: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+label{
+  font-family: Arial, Helvetica, sans-serif;
 }
 form {
   display: grid;
@@ -59,4 +75,63 @@ button {
   color: #ffffff;
   border: none;
   cursor: pointer;
+}
+.carousel {
+  position: relative;
+}
+
+.main-image {
+  position: relative;
+}
+
+.main-image img {
+  z-index: 1;
+  max-width: 58%;
+  max-height: 1%;
+  display: block;
+  margin: auto;
+  padding-top: 5%;
+  padding-bottom: 2%;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+}
+
+.thumbnails img {
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.thumbnails img:hover {
+  opacity: 1;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.arrow-left {
+  left: 0;
+}
+
+.arrow-right {
+  right: 0;
+}
+
+.arrow i {
+  color: #333;
+  font-size: 1.5rem;
 }

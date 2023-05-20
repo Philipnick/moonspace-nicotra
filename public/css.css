@@ -7,10 +7,10 @@ body {
   background-size: cover;
   background-position: center;
 }
-@font-face {
-  font-family: "NOME_FONT";
-  src: url("fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");
+font-face {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 header {
   background-color: #ffffffee;
   padding-bottom: 7% ;
@@ -22,18 +22,8 @@ header {
   margin-left: 1%;
   
 }
-main {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #ffffffe9;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-}
+
 iframe {
   margin-left: 20px;
   max-width: 100%;
@@ -45,23 +35,27 @@ h1 {
   margin-bottom: 1rem;
 }
 h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-left: 12rem;
+  font-size: 3rem;
+  margin-block-start: 5rem;
+  margin-block-end: 0;
 }
-ul {
-  list-style: none;
-  padding: 0;
-}
-li {
-  margin-bottom: 0.5rem;
-  font-family: Arial, Helvetica, sans-serif;
+.contact-text{
+  margin-left: 12rem;
+  font-size: 3rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-weight: bold;
 }
 label{
   font-family: Arial, Helvetica, sans-serif;
 }
 form {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
+  width: 50%;
+  margin-left: 12rem;
+
 }
 input, textarea {
   font-size: 1rem;
@@ -71,10 +65,13 @@ input, textarea {
 button {
   font-size: 1rem;
   padding: 0.5rem;
-  background-color: #333;
+  background-color: #7C8F74;
+  width: 15rem;
   color: #ffffff;
   border: none;
   cursor: pointer;
+  margin-left: 6rem;
+  height: 2.5rem;
 }
 .carousel {
   position: relative;
@@ -85,13 +82,12 @@ button {
 }
 
 .main-image img {
-  z-index: 1;
   max-width: 58%;
   max-height: 1%;
-  display: block;
-  margin: auto;
   padding-top: 5%;
   padding-bottom: 2%;
+  display: block;
+  margin: auto;
 }
 
 .thumbnails {
@@ -111,27 +107,91 @@ button {
   opacity: 1;
 }
 
+button {
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  outline:0;
+}
+
+svg {
+  padding: 5px;
+}
+
 .arrow {
+  cursor: pointer;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  margin-top: -45px;
+  margin-left: -35px;
   width: 50px;
-  height: 50px;
-  background-color: #fff;
-  border: none;
-  cursor: pointer;
-  z-index: 2;
+  height: 70px;
 }
 
-.arrow-left {
-  left: 0;
+.left {
+  z-index: 1;
+  left: 1.5%;
 }
 
-.arrow-right {
-  right: 0;
+.right {
+  z-index: 1;
+  left: 99%;
 }
 
-.arrow i {
-  color: #333;
-  font-size: 1.5rem;
+.left:hover polyline,
+.left:focus polyline {
+  stroke-width: 3;
+}
+
+.left:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+.right:hover polyline,
+.right:focus polyline {
+  stroke-width: 3;
+}
+
+.right:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+polyline {
+  transition: all 250ms ease-in-out;
+}
+
+.contact-right{
+  width: 50%;
+  display:flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+.contact-left {
+  width: 50%;
+  height: 100%;
+
+}
+.box{
+  margin: 3.5rem;
+  display: flex;
+  height: 66rem;
+  gap: 2rem;
+  background-color: whitesmoke;
+}
+ul li{
+  margin-bottom: 0.5rem;
+  margin-left: 12rem;
+  font-size: 1.35rem;
+  list-style: none;
+  margin-bottom: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+ul{
+  padding-inline-start: 0;
+}
+.map{
+  margin-top: 9rem;
+  margin-left: 2rem;
 }

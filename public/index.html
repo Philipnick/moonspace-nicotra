@@ -11,13 +11,13 @@
   <header>
     <img class="logo" src="img/logo.png">
     <nav style="padding: 0%;">
-      <a href="#">
+      <a href="#chisiamo">
         chi siamo
       </a>
-      <a href="#">
+      <a href="#spazi">
         spazi
       </a>
-      <a href="#">
+      <a href="#contattaci">
         contattaci
       </a>
       <a class="twitter" href="#">
@@ -43,7 +43,7 @@
       </a>
     </nav>    
   </header>
-  <div style=" width: 100%; height: 100%; background-color: #fff;">
+  <div id="chisiamo" style=" width: 100%; height: 100%; background-color: #fff;">
     <div style="max-width: 100%;">
       <h1 class="titolo">Lo spazio per te</h1>
     </div>
@@ -58,8 +58,11 @@
           </p>
         </div>
       </div>
-      <div style="max-width: 35%; position: relative; left: 5%; padding-top: 4%;">
-        <img style="max-height: 100%; max-width: 100%;" src="img/statuetta1.jpg">
+      <div class="slider">
+          <img src="img/slider1.jpg" alt="Immagine 1">
+          <img src="img/slider2.jpg" alt="Immagine 2">
+          <img src="img/slider3.jpg" alt="Immagine 3">
+          <img src="img/slider4.jpg" alt="Immagine 4">
       </div>
     </div> 
   </div>
@@ -70,9 +73,11 @@
       45.63,75.8 0.375,38.087 45.63,0.375 "/>
       </svg>  
     </button>
+    
     <div class="main-image">
       <img style="margin: auto;"src="img/studio1.jpg" alt="Immagine principale">
     </div>
+    <div id="spazi" style="position: absolute; left:20%; top: 10%;"></div>
     <button class="arrow right">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="60px" viewBox="0 0 50 80" xml:space="preserve">
         <polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
@@ -87,7 +92,7 @@
       <img src="img/studio5.jpg" alt="Immagine 5">
     </div>
   </div>
-  <div class="box">
+  <div id="contattaci" class="box">
     <div class="contact-right">
       <h3>Contatti</h3>
       <ul class="contatti-ul">
@@ -146,6 +151,21 @@
       mainImage.src = thumbnails[currentIndex].src;
       mainImage.alt = thumbnails[currentIndex].alt;
     });
+
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("slider")[0].getElementsByTagName("img");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.opacity = "0";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1} // Se raggiunto l'ultimo slide, torna al primo
+      slides[slideIndex-1].style.opacity = "1";
+      setTimeout(showSlides, 3500); // Ripeti la funzione ogni 2,5 secondi
+    }
   </script>
 </body>
 </html>

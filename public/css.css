@@ -143,6 +143,7 @@ a:hover:nth-child(5) {
 a:hover:nth-child(4) {
   color: #1da1f2;
 }
+
 .slider {
   position: relative;
   width: 100%;
@@ -345,4 +346,10 @@ polyline {
 }
 i{
   padding-left: 0.5%;
+}
+.BottoneInvio{
+  background-color: #7C8F74 ;
+  width: 100%;
+  position: relative;
+  right: 26%;
 }

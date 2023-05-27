@@ -2269,6 +2269,7 @@ section {
   background-image: url("../img/studio1.jpg");
   background-size: cover;
   background-position: center bottom;
+  opacity: 0.5;
   
   border-top: 1px solid #e1ecff;
   border-bottom: 1px solid #e1ecff;

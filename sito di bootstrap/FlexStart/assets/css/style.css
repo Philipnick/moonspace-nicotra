@@ -2395,3 +2395,7 @@ section {
   font-size: 13px;
   color: #012970;
 }
+.carousel-item img {
+  max-height: 300px;
+  object-fit: cover;
+}

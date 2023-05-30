@@ -9,6 +9,14 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+  <!-- Includi le librerie Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- Includi le librerie Bootstrap 5 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-..." crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.bundle.min.js" integrity="sha512-..." crossorigin="anonymous"></script>
+
   <!-- Favicons -->
   <link href="assets/img/Logobianco.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -29,13 +37,6 @@
   <!-- Includi jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- Includi le librerie Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!-- Includi le librerie Bootstrap 5 -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-..." crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.bundle.min.js" integrity="sha512-..." crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -71,17 +72,17 @@
 
     <div class="container">
       <div class="row">
+        <h1 data-aos="fade-up">Tutto per i tuoi eventi</h1>
         <div class="col-lg-6 d-flex flex-column ">
-          <h1 data-aos="fade-up">Tutto per i tuoi eventi</h1>
+          <br><br><br><br>
           <br>
-          <h7 data-aos="fade-up" data-aos-delay="400"> MoonSpace &egrave; una location polifunzionale situata nel quartiere milanese del Design District.
-             &Egrave; uno spazio luminoso e bianco con accesso indipendente attraverso un'area verde, composto da 160 mq su due livelli. 
-            La location &egrave; adatta per ospitare eventi aziendali o privati, temporary showroom, shooting, presentazione di prodotti,sessioni di formazione, conferenze stampa e feste private. &Egrave; stato recuperato da uno spazio industriale del primo Novecento e conserva l'anima del design italiano e delle corti milanesi, ma afferma un forte spirito internazionale. 
-             La location &egrave; composta da tre locali comunicanti di cui il centrale a doppia altezza, un bagno con doppi servizi e una cucina completamente attrezzata per la preparazione di cibo o ad uso catering.
+          <h7 data-aos="fade-up" data-aos-delay="400">MoonSpace: la location polifunzionale nel Design District di Milano, 
+            perfetta per ogni tipo di evento aziendale o privato. Uno spazio recuperato dallo stile industriale del primo Novecento, 
+            che conserva l'anima del design italiano ma con un forte spirito internazionale.
           </h7>
         </div >
         <div class="col-lg-6 pt-5" style="margin-top: 5%;">
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <div data-aos="fade-up" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -239,6 +240,7 @@
                   <i class="bi bi-telephone"></i>
                   <h3>Chiamaci</h3>
                   <p>+39 335 62 82 667</p>
+                  <br>
                 </div>
               </div>
               <div class="col-md-6">
@@ -302,53 +304,60 @@
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
-    <div class="embed-responsive embed-responsive-21by9">
-      <iframe class="map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4809.813097365645!2d9.159090352246576!3d45.45671686890933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c3e13f8719bb%3A0x2eec25899e7f128b!2sVia%20Bergognone%2C%203%2C%2020144%20Milano%20MI!5e0!3m2!1sit!2sit!4v1683828564337!5m2!1sit!2sit"
-        style="border:0"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
+    <section id="map">
+
+      <div class="container" data-aos="fade-up">
+        <div class="embed-responsive embed-responsive-21by9">
+          <iframe class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4809.813097365645!2d9.159090352246576!3d45.45671686890933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c3e13f8719bb%3A0x2eec25899e7f128b!2sVia%20Bergognone%2C%203%2C%2020144%20Milano%20MI!5e0!3m2!1sit!2sit!4v1683828564337!5m2!1sit!2sit"
+            style="border:0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
     
 
-    <div class="footer-top">
-      <div style="z-index: 4;" class="container">
-        <div class="row gy-4">
-          <div class="col-lg-5 col-md-12 footer-info">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <img src="assets/img/logo.png" alt="">
-            </a>
-            <br>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    <div class="container">
+      <div class="footer-top d-flex justify-content-center">
+        <div style="z-index: 4;" class="container">
+          <div class="row gy-4">
+            <div class="col-lg-5 col-md-12 footer-info">
+              <a href="index.html" class="logo d-flex align-items-center">
+                <img src="assets/img/logo.png" alt="">
+              </a>
+              <br>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              </div>
             </div>
+
+            <div class="col-lg-2 col-6 footer-links">
+              <h4>Link utili</h4>
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <a href="#hero">Home</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="#hero">Chi siamo</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="#spazi">Spazi</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="#contact">Contatti</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+              <h4>Contattaci</h4>
+              <p>
+                Via Bergognone 3 <br>
+                Milano, MI <br>
+                Italia <br><br>
+                <strong>Telefono:</strong> +39 335 62 82 667<br>
+                <strong>Email:</strong> s.bassi@barabino.it<br>
+              </p>
+
+            </div>
+
           </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Link utili</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Chi siamo</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Spazi</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Contatti</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-            <h4>Contattaci</h4>
-            <p>
-              Via Bergognone 3 <br>
-              Milano, MI <br>
-              Italia <br><br>
-              <strong>Telefono:</strong> +39 335 62 82 667<br>
-              <strong>Email:</strong> s.bassi@barabino.it<br>
-            </p>
-
-          </div>
-
         </div>
       </div>
     </div>

@@ -26,6 +26,49 @@ h6 {
   font-family:  "MBCorpo Text", "DaimlerCS-Regular", "DaimlerCSArab-Regular", sans-serif
 }
 
+#cookie-section {
+  z-index: 2000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+#cookie-content {
+  margin-bottom: 10px;
+}
+
+#cookie-content p {
+  margin: 0;
+}
+
+#cookie-buttons {
+  margin-top: 10px;
+}
+
+#cookie-buttons button {
+  background-color: #5d7452af;
+  color: whitesmoke;
+  border: none;
+  padding: 8px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#cookie-buttons button:hover {
+  background-color: #5d7452af;
+}
+
+.cookiePolicy{
+  margin: 8rem;
+}
+
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/

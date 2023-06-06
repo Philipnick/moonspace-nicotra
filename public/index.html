@@ -8,14 +8,11 @@
   <title>MoonSpace</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
-  <!-- Includi le librerie Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <!-- Includi le librerie Bootstrap 5 -->
+ <!-- Includi le librerie Bootstrap 5 -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-..." crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.bundle.min.js" integrity="sha512-..." crossorigin="anonymous"></script>
+
 
   <!-- Favicons -->
   <link href="assets/img/Logobianco.png" rel="icon">
@@ -37,12 +34,14 @@
   <!-- Includi jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+
+
 </head>
 
 <body>
 
   <!--====== Cookies ======-->
-  <div id="cookie-section">
+  <!--div id="cookie-section">
     <div id="cookie-content">
         <p>Questo sito utilizza i cookie per migliorare l'esperienza dell'utente. Accetta o rifiuta l'uso dei cookie
             selezionando l'opzione desiderata. <a href="PrivacyPolicy.html">Informativa sulla privacy</a></p>
@@ -51,7 +50,7 @@
             <button id="cookie-reject">Rifiuta</button>
         </div>
     </div>
-  </div>
+  </div-->
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top">
@@ -82,7 +81,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero d-flex align-items-center p-4">
 
-    <div class="container">
+    <div  data-aos="fade-up" class="container">
       <div class="row">
         <h1 data-aos="fade-up" style="margin-top: 6rem;">Tutto per i tuoi eventi</h1>
         <div class="col-lg-6 d-flex flex-column ">
@@ -94,48 +93,39 @@
           </h7>
         </div >
         <div class="col-lg-6 pt-5" style="margin-top: 5%;">
-          <div data-aos="fade-up" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-            </ol>
+          <div  data-aos="fade-up" id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100" src="assets/img/slider1.jpg" alt="First slide">
+                <img src="assets/img/slider1.jpg" class="d-block w-100" alt="First slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="assets/img/slider2.jpg" alt="Second slide">
+                <img src="assets/img/slider2.jpg" class="d-block w-100" alt="Second slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="assets/img/slider3.jpg" alt="Third slide">
+                <img src="assets/img/slider3.jpg" class="d-block w-100" alt="Third slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="assets/img/slider4.jpg" alt="Third slide">
+                <img src="assets/img/slider4.jpg" class="d-block w-100" alt="Fourth slide">
               </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
         </div>
       </div>
-    </div> 
-    <script>
-      $(document).ready(function(){
-        $('.carousel').carousel({
-          interval: 100, // Tempo di scorrimento tra le slide in millisecondi
-          pause: "hover", // Pausa automatica dello slider su hover
-          wrap: true // Ripeti lo scorrimento delle slide
-        });
-      });
-    </script>
+    </div>
 
   </section><!-- End Hero -->
 

@@ -293,3 +293,53 @@
   new PureCounter();
 
 })();
+document.addEventListener('DOMContentLoaded', function() {
+  var cookieSection = document.getElementById('cookie-section');
+  var cookieAccept = document.getElementById('cookie-accept');
+  var cookieReject = document.getElementById('cookie-reject');
+
+  cookieAccept.addEventListener('click', function() {
+      cookieSection.style.display = 'none';
+      setCookie('cookieAccepted', 'true', 365);
+  });
+
+  cookieReject.addEventListener('click', function() {
+      cookieSection.style.display = 'none';
+      setCookie('cookieRejected', 'true', 365);
+  });
+
+  if (getCookie('cookieAccepted') === 'true' || getCookie('cookieRejected') === 'true') {
+      cookieSection.style.display = 'none';
+  }
+});
+
+function setCookie(name, value, days) {
+  var expires = '';
+
+  if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = '; expires=' + date.toUTCString();
+  }
+
+  document.cookie = name + '=' + value + expires + '; path=/';
+}
+
+function getCookie(name) {
+  var nameEQ = name + '=';
+  var cookies = document.cookie.split(';');
+
+  for (var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i];
+
+      while (cookie.charAt(0) === ' ') {
+          cookie = cookie.substring(1, cookie.length);
+      }
+
+      if (cookie.indexOf(nameEQ) === 0) {
+          return cookie.substring(nameEQ.length, cookie.length);
+      }
+  }
+
+  return null;
+}
